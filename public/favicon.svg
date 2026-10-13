@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26" height="26">
+  <title>TobeHired</title>
+  <!-- Adaptive favicon: follows the browser's light/dark theme. Transparent background. -->
+  <style>
+    .a { fill: #13202B; }
+    .b { fill: #0A5C9E; }
+    .c { fill: #F5B700; }
+    @media (prefers-color-scheme: dark) {
+      .a { fill: #E9F0ED; }
+      .b { fill: #62B4F2; }
+    }
+  </style>
+  <rect class="a" x="1" y="17" width="24" height="8" rx="1.5"/>
+  <rect class="b" x="1" y="9" width="17" height="8" rx="1.5"/>
+  <rect class="c" x="1" y="1" width="10" height="8" rx="1.5"/>
+</svg>
