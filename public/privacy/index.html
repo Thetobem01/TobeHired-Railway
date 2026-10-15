@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How TobeHired handles your information. No sign-up, no tracking cookies, and chats with the assistant are not saved.">
+<link rel="canonical" href="https://tobehired.co.uk/privacy/">
+<title>Privacy | TobeHired</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,800;125,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a job-centre noticeboard. Big condensed-to-wide headline, a search card as the first real action, vacancy-slip rows for boards, quiet utility sections below. */
+:root {
+  --paper: #F1F4F1;
+  --surface: #FFFFFF;
+  --ink: #13202B;
+  --muted: #4B5B66;
+  --line: #CFD8D3;
+  --accent: #0A5C9E;
+  --accent-ink: #FFFFFF;
+  --mark: #F5B700;
+  --on-mark: #13202B;
+  --good: #1B7A4B;
+  --warn-bg: #FFF4D6;
+  --warn-line: #E2B93B;
+  --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E1A22; --surface: #15252F; --ink: #E9F0ED; --muted: #9DAFB8; --line: #2A3C47;
+    --accent: #62B4F2; --accent-ink: #0A1820; --good: #5FCB93; --warn-bg: #2B2410; --warn-line: #8A6E14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E1A22; --surface: #15252F; --ink: #E9F0ED; --muted: #9DAFB8; --line: #2A3C47;
+  --accent: #62B4F2; --accent-ink: #0A1820; --good: #5FCB93; --warn-bg: #2B2410; --warn-line: #8A6E14;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  padding-inline: clamp(16px, 4vw, 40px); padding-block: 0 48px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+}
+.wrap { max-width: 1080px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.05; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; font-stretch: 112%; letter-spacing: -0.01em; }
+h3 { font-size: 1.1rem; font-weight: 800; font-stretch: 100%; }
+p { margin: 0; }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+/* header */
+header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 18px; }
+.brand { font-family: var(--font-display); font-weight: 800; font-stretch: 125%; font-size: 1.25rem; letter-spacing: -.01em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.brand-mark { width: 26px; height: 26px; display: block; }
+nav.main { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: .95rem; font-weight: 600; }
+nav.main a { color: var(--ink); text-decoration: none; padding-block: 4px; border-bottom: 2px solid transparent; }
+nav.main a:hover { border-bottom-color: var(--mark); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 32px 48px; align-items: start; padding-block: 28px 56px; }
+.hero h1 { font-weight: 800; font-stretch: 125%; font-size: clamp(2.3rem, 6.2vw, 4.1rem); letter-spacing: -.02em; }
+.hl { background: linear-gradient(transparent 58%, var(--mark) 58% 92%, transparent 92%); padding-inline: .06em; }
+.hero .lede { margin-top: 20px; font-size: 1.12rem; max-width: 34em; color: var(--muted); }
+.hero .lede strong { color: var(--ink); }
+.trust { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .9rem; font-weight: 600; }
+.trust span::before { content: ""; display: inline-block; width: .55em; height: .55em; background: var(--good); border-radius: 50%; margin-right: 8px; }
+
+.finder { background: var(--surface); border: 2px solid var(--ink); border-radius: 6px; padding: 22px; box-shadow: 6px 6px 0 var(--ink); }
+.finder h2 { font-size: 1.35rem; font-stretch: 100%; }
+.finder form { margin-top: 16px; display: grid; gap: 14px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-size: .85rem; font-weight: 700; }
+.field input {
+  font: inherit; color: var(--ink); background: var(--paper); border: 2px solid var(--line);
+  border-radius: 4px; padding: 11px 12px; width: 100%; min-width: 0;
+}
+.field input:hover { border-color: var(--muted); }
+.field input:focus { border-color: var(--accent); }
+.btn {
+  font: inherit; font-weight: 700; cursor: pointer; border: 2px solid var(--ink);
+  background: var(--mark); color: var(--on-mark); border-radius: 4px; padding: 12px 18px;
+}
+.btn:hover { filter: brightness(.95); }
+.btn:active { transform: translateY(1px); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip {
+  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; color: var(--ink);
+  background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: 5px 12px;
+}
+.chip:hover { border-color: var(--ink); }
+.chips-label { margin-top: 18px; font-size: .8rem; color: var(--muted); font-weight: 600; }
+
+/* sections */
+section.block { padding-block: 56px; border-top: 2px solid var(--ink); }
+.block-head { display: grid; gap: 10px; margin-bottom: 28px; max-width: 40em; }
+.block-head p { color: var(--muted); }
+
+/* vacancy slips */
+.slips { display: grid; gap: 14px; padding: 0; margin: 0; list-style: none; }
+.slip { display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; overflow: hidden; }
+.slip .stub { padding: 16px; border-right: 2px dashed var(--line); display: grid; align-content: center; gap: 4px; }
+.slip .stub b { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 1.05rem; line-height: 1.15; }
+.slip .stub small { color: var(--muted); font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.slip .body { padding: 16px 20px; min-width: 0; }
+.slip .body p { font-size: .95rem; }
+.slip .query { margin-top: 6px; font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
+.slip .go { display: flex; align-items: center; padding: 16px 20px 16px 0; }
+.go a { display: inline-block; text-decoration: none; font-weight: 700; color: var(--accent-ink); background: var(--accent); border-radius: 4px; padding: 10px 16px; white-space: nowrap; }
+.go a:hover { filter: brightness(1.1); }
+.note { margin-top: 14px; font-size: .88rem; color: var(--muted); }
+
+/* plan */
+.plan-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 32px; align-items: start; }
+.tasks { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.task { display: grid; grid-template-columns: 84px 1fr; align-items: start; background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; }
+.task label { display: contents; cursor: pointer; }
+.task .day { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; padding: 14px 0 14px 14px; color: var(--muted); }
+.task .what { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px 12px 0; }
+.task input { width: 22px; height: 22px; margin: 1px 0 0; flex: none; accent-color: var(--good); cursor: pointer; }
+.task input:checked + span { text-decoration: line-through; color: var(--muted); }
+.task:has(input:checked) { border-color: var(--good); }
+.task.cont { margin-top: -2px; border-top-left-radius: 0; border-top-right-radius: 0; }
+.task.cont .day { visibility: hidden; }
+.progress { background: var(--surface); border: 2px solid var(--ink); border-radius: 6px; padding: 20px; position: sticky; top: 16px; }
+.progress .big { font-family: var(--font-display); font-weight: 800; font-stretch: 125%; font-size: 3rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.bar { margin-top: 14px; height: 12px; background: var(--paper); border: 1.5px solid var(--ink); border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--good); transition: width .25s ease; }
+.progress p { margin-top: 12px; font-size: .9rem; color: var(--muted); }
+.progress button { margin-top: 14px; font: inherit; font-size: .85rem; font-weight: 600; background: none; border: none; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+
+/* CV */
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.panel { background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; padding: 22px; }
+.panel h3 { margin-bottom: 12px; }
+.panel ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.panel.yes { border-top: 5px solid var(--good); }
+.panel.no { border-top: 5px solid var(--muted); }
+.formula { margin-top: 20px; background: var(--surface); border: 1.5px dashed var(--ink); border-radius: 6px; padding: 20px 22px; }
+.formula .eq { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: 1.15rem; margin-top: 6px; }
+.formula .eq em { font-style: normal; background: linear-gradient(transparent 58%, var(--mark) 58% 92%, transparent 92%); }
+.formula .ex { margin-top: 10px; color: var(--muted); }
+
+/* interview */
+.qs { display: grid; gap: 10px; }
+details { background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; }
+details[open] { border-color: var(--ink); }
+summary { cursor: pointer; padding: 16px 18px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--font-display); font-size: 1.3rem; line-height: 1; }
+details[open] summary::after { content: "\2212"; }
+details .ans { padding: 0 18px 18px; color: var(--muted); max-width: 60ch; }
+details .ans b { color: var(--ink); }
+
+/* help */
+.help { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; }
+.help li { background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; padding: 18px 20px; display: grid; gap: 6px; align-content: start; }
+.help a { font-weight: 700; font-family: var(--font-display); font-stretch: 105%; font-size: 1.05rem; }
+.help span { color: var(--muted); font-size: .93rem; }
+.scam { margin-top: 28px; background: var(--warn-bg); border: 2px solid var(--warn-line); border-radius: 6px; padding: 20px 22px; display: grid; gap: 8px; }
+.scam h3 { font-size: 1.15rem; }
+.scam ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
+
+footer { margin-top: 24px; padding-top: 24px; border-top: 2px solid var(--ink); font-size: .88rem; color: var(--muted); display: grid; gap: 6px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-bottom: 40px; }
+  .plan-grid { grid-template-columns: minmax(0, 1fr); }
+  .progress { position: static; order: -1; }
+}
+@media (max-width: 680px) {
+  .slip { grid-template-columns: minmax(0, 1fr); }
+  .slip .stub { border-right: none; border-bottom: 2px dashed var(--line); }
+  .slip .go { padding: 0 20px 18px; }
+  .two, .help { grid-template-columns: minmax(0, 1fr); }
+  .finder { box-shadow: 4px 4px 0 var(--ink); padding: 18px; }
+  .task { grid-template-columns: 72px 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .bar i { transition: none; } }
+
+/* assistant */
+.chat-fab { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 50; font: inherit; font-weight: 700; cursor: pointer; background: var(--ink); color: var(--paper); border: 2px solid var(--ink); border-radius: 999px; padding: 13px 20px; box-shadow: 4px 4px 0 var(--mark); }
+.chat-fab:hover { transform: translate(-1px,-1px); }
+.chat-panel { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 60; width: min(400px, calc(100vw - 32px)); height: min(600px, calc(100dvh - 32px)); display: grid; grid-template-rows: auto minmax(0,1fr) auto auto; background: var(--surface); color: var(--ink); border: 2px solid var(--ink); border-radius: 8px; box-shadow: 6px 6px 0 var(--ink); overflow: hidden; }
+.chat-panel[hidden] { display: none; }
+.chat-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: var(--ink); color: var(--paper); }
+.chat-head b { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; }
+.chat-actions { display: flex; align-items: center; gap: 8px; }
+.chat-head .chat-text-btn { font-size: .85rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.chat-head button { font: inherit; background: none; border: 0; color: inherit; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 0 4px; }
+.chat-log { overflow-y: auto; padding: 16px; display: grid; gap: 10px; align-content: start; }
+.msg { max-width: 88%; padding: 10px 13px; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .95rem; line-height: 1.5; }
+.msg.bot { background: var(--paper); border: 1.5px solid var(--line); justify-self: start; }
+.msg.me { background: var(--accent); color: var(--accent-ink); justify-self: end; }
+.msg.err { background: var(--warn-bg); border: 1.5px solid var(--warn-line); justify-self: start; }
+.starters { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 16px 12px; }
+.starters:empty { display: none; }
+.chat-form { display: flex; gap: 8px; padding: 12px 16px; border-top: 1.5px solid var(--line); }
+.chat-form textarea { flex: 1; min-width: 0; resize: none; max-height: 120px; font: inherit; color: var(--ink); background: var(--paper); border: 2px solid var(--line); border-radius: 4px; padding: 10px 12px; }
+.chat-form button { font: inherit; font-weight: 700; cursor: pointer; background: var(--mark); color: var(--on-mark); border: 2px solid var(--ink); border-radius: 4px; padding: 0 16px; }
+.chat-form button:disabled { opacity: .5; cursor: default; }
+.chat-note { font-size: .74rem; color: var(--muted); padding: 0 16px 12px; }
+@media (max-width: 480px) { .chat-panel { right: 8px; bottom: 8px; width: calc(100vw - 16px); height: calc(100dvh - 16px); } }
+.towns { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px 16px; }
+.towns a { display: block; padding: 8px 0; font-weight: 600; border-bottom: 1.5px solid var(--line); text-decoration: none; }
+.towns-nation { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; margin: 22px 0 6px; }
+.towns a:hover { border-bottom-color: var(--mark); }
+</style>
+<style>.legal { max-width: 44em; padding-block: 24px 48px; } .legal h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 8px 0 16px; } .legal h2 { font-size: 1.25rem; margin: 32px 0 8px; } .legal p, .legal li { margin: 8px 0; } .legal ul { padding-left: 1.2em; }</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="brand" href="/" aria-label="TobeHired home">TobeHired</a></header>
+  <main id="top" class="legal">
+  <p class="eyebrow">Privacy</p>
+  <h1>Your privacy</h1>
+  <p class="lede">TobeHired is free and there is no sign-up. This page explains, in plain English, what happens to your information when you use it. Last updated 12 October 2026.</p>
+
+  <h2>Who runs this site</h2>
+  <p>TobeHired is run by Tobe Martins, a freelance graphic and motion designer in Norwich. It is independent and not affiliated with the job sites it links to.</p>
+
+  <h2>What we collect</h2>
+  <p>We do not ask for your name, email address or any account details. The site does not add advertising or analytics tools, and it does not set tracking cookies.</p>
+
+  <h2>What stays on your device</h2>
+  <p>The ticks you make in the 7-day plan are saved in your own browser so they are still there when you come back. They are not sent to us. You can remove them any time by clearing this site's data in your browser settings.</p>
+  <p>The job and town you type into the search box also stay in your browser.</p>
+
+  <h2>When you open a job site</h2>
+  <p>Pressing a search button opens that job site in a new tab with your search in the link. From that point the job site's own privacy policy applies, not ours.</p>
+
+  <h2>The TobeHired assistant</h2>
+  <p>The assistant is an AI, so it can make mistakes and it cannot see live vacancies.</p>
+  <ul>
+    <li>The messages you send, and the nation and town shown on the page, are passed through our server to Anthropic's Claude so it can write a reply.</li>
+    <li>TobeHired does not save your chats and does not log the text of your messages. Use "New chat" to clear the conversation from the page.</li>
+    <li>Anthropic handles the text it receives under <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">its own privacy policy</a>.</li>
+    <li>To stop misuse, the server briefly counts how many messages come from the same internet connection. This is not kept as a record.</li>
+    <li>Please do not type passwords, bank or ID details, or sensitive personal information into the assistant. If you paste a CV, leave out your date of birth and full address.</li>
+  </ul>
+
+  <h2>Hosting and fonts</h2>
+  <p>The site is hosted on Vercel. Like any web host, Vercel's servers handle your internet address and basic technical details to deliver the page and keep it secure. The page's fonts are loaded from Google Fonts, so your browser contacts Google when the page loads. Both companies handle that information under their own policies.</p>
+
+  <h2>Your rights</h2>
+  <p>Because TobeHired does not collect information that identifies you, there is nothing held here for us to look up or delete. For information held by Vercel, Google, Anthropic or a job site, contact that company. The UK data protection regulator is the <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office</a>.</p>
+
+  <p><a href="/">Back to TobeHired</a></p>
+</main>
+
+  <footer><p><strong>TobeHired</strong> is an independent guide. <a href="/privacy/">Privacy</a></p></footer>
+</div>
+</body>
+</html>

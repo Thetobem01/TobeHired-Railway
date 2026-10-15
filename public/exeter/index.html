@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Looking for work in Exeter? Search four job sites at once, then follow a 7-day plan with CV and interview help. Free, no sign-up.">
+<meta property="og:title" content="Jobs in Exeter | TobeHired">
+<meta property="og:description" content="Search four UK job sites at once, follow a 7-day plan, and get CV and interview help.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tobehired.co.uk/exeter/">
+<link rel="canonical" href="https://tobehired.co.uk/exeter/">
+<title>Jobs in Exeter | TobeHired</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,800;125,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a job-centre noticeboard. Big condensed-to-wide headline, a search card as the first real action, vacancy-slip rows for boards, quiet utility sections below. */
+:root {
+  --paper: #F1F4F1;
+  --surface: #FFFFFF;
+  --ink: #13202B;
+  --muted: #4B5B66;
+  --line: #CFD8D3;
+  --accent: #0A5C9E;
+  --accent-ink: #FFFFFF;
+  --mark: #F5B700;
+  --on-mark: #13202B;
+  --good: #1B7A4B;
+  --warn-bg: #FFF4D6;
+  --warn-line: #E2B93B;
+  --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E1A22; --surface: #15252F; --ink: #E9F0ED; --muted: #9DAFB8; --line: #2A3C47;
+    --accent: #62B4F2; --accent-ink: #0A1820; --good: #5FCB93; --warn-bg: #2B2410; --warn-line: #8A6E14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E1A22; --surface: #15252F; --ink: #E9F0ED; --muted: #9DAFB8; --line: #2A3C47;
+  --accent: #62B4F2; --accent-ink: #0A1820; --good: #5FCB93; --warn-bg: #2B2410; --warn-line: #8A6E14;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  padding-inline: clamp(16px, 4vw, 40px); padding-block: 0 48px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px;
+}
+.wrap { max-width: 1080px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.05; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; font-stretch: 112%; letter-spacing: -0.01em; }
+h3 { font-size: 1.1rem; font-weight: 800; font-stretch: 100%; }
+p { margin: 0; }
+.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+/* header */
+header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 18px; }
+.brand { font-family: var(--font-display); font-weight: 800; font-stretch: 125%; font-size: 1.25rem; letter-spacing: -.01em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.brand-mark { width: 26px; height: 26px; display: block; }
+nav.main { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: .95rem; font-weight: 600; }
+nav.main a { color: var(--ink); text-decoration: none; padding-block: 4px; border-bottom: 2px solid transparent; }
+nav.main a:hover { border-bottom-color: var(--mark); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 32px 48px; align-items: start; padding-block: 28px 56px; }
+.hero h1 { font-weight: 800; font-stretch: 125%; font-size: clamp(2.3rem, 6.2vw, 4.1rem); letter-spacing: -.02em; }
+.hl { background: linear-gradient(transparent 58%, var(--mark) 58% 92%, transparent 92%); padding-inline: .06em; }
+.hero .lede { margin-top: 20px; font-size: 1.12rem; max-width: 34em; color: var(--muted); }
+.hero .lede strong { color: var(--ink); }
+.trust { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .9rem; font-weight: 600; }
+.trust span::before { content: ""; display: inline-block; width: .55em; height: .55em; background: var(--good); border-radius: 50%; margin-right: 8px; }
+
+.finder { background: var(--surface); border: 2px solid var(--ink); border-radius: 6px; padding: 22px; box-shadow: 6px 6px 0 var(--ink); }
+.finder h2 { font-size: 1.35rem; font-stretch: 100%; }
+.finder form { margin-top: 16px; display: grid; gap: 14px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-size: .85rem; font-weight: 700; }
+.field input {
+  font: inherit; color: var(--ink); background: var(--paper); border: 2px solid var(--line);
+  border-radius: 4px; padding: 11px 12px; width: 100%; min-width: 0;
+}
+.field input:hover { border-color: var(--muted); }
+.field input:focus { border-color: var(--accent); }
+.btn {
+  font: inherit; font-weight: 700; cursor: pointer; border: 2px solid var(--ink);
+  background: var(--mark); color: var(--on-mark); border-radius: 4px; padding: 12px 18px;
+}
+.btn:hover { filter: brightness(.95); }
+.btn:active { transform: translateY(1px); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip {
+  font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; color: var(--ink);
+  background: transparent; border: 1.5px solid var(--line); border-radius: 999px; padding: 5px 12px;
+}
+.chip:hover { border-color: var(--ink); }
+.chips-label { margin-top: 18px; font-size: .8rem; color: var(--muted); font-weight: 600; }
+
+/* sections */
+section.block { padding-block: 56px; border-top: 2px solid var(--ink); }
+.block-head { display: grid; gap: 10px; margin-bottom: 28px; max-width: 40em; }
+.block-head p { color: var(--muted); }
+
+/* vacancy slips */
+.slips { display: grid; gap: 14px; padding: 0; margin: 0; list-style: none; }
+.slip { display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; overflow: hidden; }
+.slip .stub { padding: 16px; border-right: 2px dashed var(--line); display: grid; align-content: center; gap: 4px; }
+.slip .stub b { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 1.05rem; line-height: 1.15; }
+.slip .stub small { color: var(--muted); font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.slip .body { padding: 16px 20px; min-width: 0; }
+.slip .body p { font-size: .95rem; }
+.slip .query { margin-top: 6px; font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
+.slip .go { display: flex; align-items: center; padding: 16px 20px 16px 0; }
+.go a { display: inline-block; text-decoration: none; font-weight: 700; color: var(--accent-ink); background: var(--accent); border-radius: 4px; padding: 10px 16px; white-space: nowrap; }
+.go a:hover { filter: brightness(1.1); }
+.note { margin-top: 14px; font-size: .88rem; color: var(--muted); }
+
+/* plan */
+.plan-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 32px; align-items: start; }
+.tasks { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.task { display: grid; grid-template-columns: 84px 1fr; align-items: start; background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; }
+.task label { display: contents; cursor: pointer; }
+.task .day { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; padding: 14px 0 14px 14px; color: var(--muted); }
+.task .what { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px 12px 0; }
+.task input { width: 22px; height: 22px; margin: 1px 0 0; flex: none; accent-color: var(--good); cursor: pointer; }
+.task input:checked + span { text-decoration: line-through; color: var(--muted); }
+.task:has(input:checked) { border-color: var(--good); }
+.task.cont { margin-top: -2px; border-top-left-radius: 0; border-top-right-radius: 0; }
+.task.cont .day { visibility: hidden; }
+.progress { background: var(--surface); border: 2px solid var(--ink); border-radius: 6px; padding: 20px; position: sticky; top: 16px; }
+.progress .big { font-family: var(--font-display); font-weight: 800; font-stretch: 125%; font-size: 3rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.bar { margin-top: 14px; height: 12px; background: var(--paper); border: 1.5px solid var(--ink); border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--good); transition: width .25s ease; }
+.progress p { margin-top: 12px; font-size: .9rem; color: var(--muted); }
+.progress button { margin-top: 14px; font: inherit; font-size: .85rem; font-weight: 600; background: none; border: none; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+
+/* CV */
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.panel { background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; padding: 22px; }
+.panel h3 { margin-bottom: 12px; }
+.panel ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.panel.yes { border-top: 5px solid var(--good); }
+.panel.no { border-top: 5px solid var(--muted); }
+.formula { margin-top: 20px; background: var(--surface); border: 1.5px dashed var(--ink); border-radius: 6px; padding: 20px 22px; }
+.formula .eq { font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: 1.15rem; margin-top: 6px; }
+.formula .eq em { font-style: normal; background: linear-gradient(transparent 58%, var(--mark) 58% 92%, transparent 92%); }
+.formula .ex { margin-top: 10px; color: var(--muted); }
+
+/* interview */
+.qs { display: grid; gap: 10px; }
+details { background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; }
+details[open] { border-color: var(--ink); }
+summary { cursor: pointer; padding: 16px 18px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--font-display); font-size: 1.3rem; line-height: 1; }
+details[open] summary::after { content: "\2212"; }
+details .ans { padding: 0 18px 18px; color: var(--muted); max-width: 60ch; }
+details .ans b { color: var(--ink); }
+
+/* help */
+.help { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; }
+.help li { background: var(--surface); border: 1.5px solid var(--line); border-radius: 6px; padding: 18px 20px; display: grid; gap: 6px; align-content: start; }
+.help a { font-weight: 700; font-family: var(--font-display); font-stretch: 105%; font-size: 1.05rem; }
+.help span { color: var(--muted); font-size: .93rem; }
+.scam { margin-top: 28px; background: var(--warn-bg); border: 2px solid var(--warn-line); border-radius: 6px; padding: 20px 22px; display: grid; gap: 8px; }
+.scam h3 { font-size: 1.15rem; }
+.scam ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
+
+footer { margin-top: 24px; padding-top: 24px; border-top: 2px solid var(--ink); font-size: .88rem; color: var(--muted); display: grid; gap: 6px; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-bottom: 40px; }
+  .plan-grid { grid-template-columns: minmax(0, 1fr); }
+  .progress { position: static; order: -1; }
+}
+@media (max-width: 680px) {
+  .slip { grid-template-columns: minmax(0, 1fr); }
+  .slip .stub { border-right: none; border-bottom: 2px dashed var(--line); }
+  .slip .go { padding: 0 20px 18px; }
+  .two, .help { grid-template-columns: minmax(0, 1fr); }
+  .finder { box-shadow: 4px 4px 0 var(--ink); padding: 18px; }
+  .task { grid-template-columns: 72px 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .bar i { transition: none; } }
+
+/* assistant */
+.chat-fab { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 50; font: inherit; font-weight: 700; cursor: pointer; background: var(--ink); color: var(--paper); border: 2px solid var(--ink); border-radius: 999px; padding: 13px 20px; box-shadow: 4px 4px 0 var(--mark); }
+.chat-fab:hover { transform: translate(-1px,-1px); }
+.chat-panel { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 60; width: min(400px, calc(100vw - 32px)); height: min(600px, calc(100dvh - 32px)); display: grid; grid-template-rows: auto minmax(0,1fr) auto auto; background: var(--surface); color: var(--ink); border: 2px solid var(--ink); border-radius: 8px; box-shadow: 6px 6px 0 var(--ink); overflow: hidden; }
+.chat-panel[hidden] { display: none; }
+.chat-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; background: var(--ink); color: var(--paper); }
+.chat-head b { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; }
+.chat-actions { display: flex; align-items: center; gap: 8px; }
+.chat-head .chat-text-btn { font-size: .85rem; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.chat-head button { font: inherit; background: none; border: 0; color: inherit; cursor: pointer; font-size: 1.4rem; line-height: 1; padding: 0 4px; }
+.chat-log { overflow-y: auto; padding: 16px; display: grid; gap: 10px; align-content: start; }
+.msg { max-width: 88%; padding: 10px 13px; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .95rem; line-height: 1.5; }
+.msg.bot { background: var(--paper); border: 1.5px solid var(--line); justify-self: start; }
+.msg.me { background: var(--accent); color: var(--accent-ink); justify-self: end; }
+.msg.err { background: var(--warn-bg); border: 1.5px solid var(--warn-line); justify-self: start; }
+.starters { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 16px 12px; }
+.starters:empty { display: none; }
+.chat-form { display: flex; gap: 8px; padding: 12px 16px; border-top: 1.5px solid var(--line); }
+.chat-form textarea { flex: 1; min-width: 0; resize: none; max-height: 120px; font: inherit; color: var(--ink); background: var(--paper); border: 2px solid var(--line); border-radius: 4px; padding: 10px 12px; }
+.chat-form button { font: inherit; font-weight: 700; cursor: pointer; background: var(--mark); color: var(--on-mark); border: 2px solid var(--ink); border-radius: 4px; padding: 0 16px; }
+.chat-form button:disabled { opacity: .5; cursor: default; }
+.chat-note { font-size: .74rem; color: var(--muted); padding: 0 16px 12px; }
+@media (max-width: 480px) { .chat-panel { right: 8px; bottom: 8px; width: calc(100vw - 16px); height: calc(100dvh - 16px); } }
+.towns { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px 16px; }
+.towns a { display: block; padding: 8px 0; font-weight: 600; border-bottom: 1.5px solid var(--line); text-decoration: none; }
+.towns-nation { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; margin: 22px 0 6px; }
+.towns a:hover { border-bottom-color: var(--mark); }
+</style>
+</head>
+<body data-nation="England">
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top" aria-label="TobeHired home">
+      <svg class="brand-mark" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="17" width="24" height="8" rx="1.5" fill="var(--ink)"/><rect x="1" y="9" width="17" height="8" rx="1.5" fill="var(--accent)"/><rect x="1" y="1" width="10" height="8" rx="1.5" fill="var(--mark)"/></svg>
+      TobeHired
+    </a>
+    <nav class="main" aria-label="Sections">
+      <a href="#search">Search</a>
+      <a href="#week">First week</a>
+      <a href="#cv">CV</a>
+      <a href="#interview">Interviews</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Free job-search help for Exeter</p>
+        <h1 style="margin-top:14px">Find work in <span class="hl">Exeter.</span></h1>
+        <p class="lede">Tell us the job you want. TobeHired opens the same search for Exeter on four UK job sites, then walks you through your first week of applying, a CV that gets read, and what to say in the interview. <strong>No sign-up, no fees, no catch.</strong></p>
+        <div class="trust">
+          <span>Free to use</span>
+          <span>No account needed</span>
+          <span>Links to official sources</span>
+        </div>
+      </div>
+
+      <aside class="finder" id="search" aria-labelledby="finder-title">
+        <h2 id="finder-title">Search four job sites at once</h2>
+        <form id="searchForm" novalidate>
+          <div class="field">
+            <label for="kw">Job or skill</label>
+            <input id="kw" name="kw" type="text" placeholder="e.g. care assistant, driver, receptionist" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="loc">Town, city or postcode</label>
+            <input id="loc" name="loc" type="text" placeholder="e.g. Exeter or EX1" value="Exeter" autocomplete="off">
+          </div>
+          <button class="btn" type="submit">Build my searches</button>
+        </form>
+        <p class="chips-label">Popular starting points</p>
+        <div class="chips" id="chips">
+          <button class="chip" type="button">Care assistant</button>
+          <button class="chip" type="button">Warehouse operative</button>
+          <button class="chip" type="button">Customer service</button>
+          <button class="chip" type="button">Kitchen porter</button>
+          <button class="chip" type="button">Delivery driver</button>
+          <button class="chip" type="button">Admin assistant</button>
+        </div>
+      </aside>
+    </div>
+
+    <section class="block" aria-labelledby="boards-h">
+      <div class="block-head">
+        <p class="eyebrow">Where to look</p>
+        <h2 id="boards-h">Four places that list real vacancies</h2>
+        <p id="boardsLead">Enter a job and a place above. Each button below then opens that search on the site, in a new tab.</p>
+      </div>
+      <ul class="slips" id="slips"></ul>
+      <p class="note">Some sites open on their own home page, so type your job and town in the site's search box. Searching from Scotland, Wales or Northern Ireland? Choose your town below for the right local sites. Set up a free job alert on at least two of these so new vacancies reach you the day they are posted. TobeHired is independent and not affiliated with these sites.</p>
+    </section>
+
+    <section class="block" id="week" aria-labelledby="week-h">
+      <div class="block-head">
+        <p class="eyebrow">Your first week</p>
+        <h2 id="week-h">Seven days to a proper start</h2>
+        <p>Tick each step as you finish it. Your progress stays in this browser, so you can close the page and come back.</p>
+      </div>
+      <div class="plan-grid">
+        <ul class="tasks" id="tasks"></ul>
+        <div class="progress" aria-live="polite">
+          <p class="eyebrow">Done so far</p>
+          <p class="big"><span id="doneCount">0</span> / <span id="totalCount">9</span></p>
+          <div class="bar" role="progressbar" aria-label="Weekly plan progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="barFill"></i></div>
+          <p id="progressMsg">Start with Day 1. It takes about 20 minutes.</p>
+          <button type="button" id="resetBtn">Clear all ticks</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="cv" aria-labelledby="cv-h">
+      <div class="block-head">
+        <p class="eyebrow">Your CV</p>
+        <h2 id="cv-h">One page. Newest job first.</h2>
+        <p>Employers often spend under a minute on a first look. Put the proof near the top and cut anything that does not help you get this job.</p>
+      </div>
+      <div class="two">
+        <div class="panel yes">
+          <h3>Put in</h3>
+          <ul>
+            <li>Name, phone, email and your town</li>
+            <li>A two-line profile: who you are and what job you want</li>
+            <li>Jobs, newest first, with 3 short bullet points each</li>
+            <li>Certificates and tickets (food hygiene, first aid, forklift, driving licence)</li>
+            <li>Education and training, briefly</li>
+            <li>A line that references are available on request</li>
+          </ul>
+        </div>
+        <div class="panel no">
+          <h3>Leave out</h3>
+          <ul>
+            <li>A photo, your date of birth or your full home address</li>
+            <li>Long paragraphs about your personality</li>
+            <li>Every job you have ever done. Keep the last 10 years unless an older one fits</li>
+            <li>Unexplained gaps. Add one honest line, such as "Caring for family" or "Retraining"</li>
+            <li>Spelling mistakes. Read it aloud, then ask someone else to read it</li>
+          </ul>
+        </div>
+      </div>
+      <div class="formula">
+        <p class="eyebrow">Write every bullet like this</p>
+        <p class="eq"><em>What you did</em> + <em>how much or how often</em> + <em>the result</em></p>
+        <p class="ex">Example: "Served up to 120 customers a day on a busy till, with no cash differences in six months."</p>
+      </div>
+    </section>
+
+    <section class="block" id="interview" aria-labelledby="int-h">
+      <div class="block-head">
+        <p class="eyebrow">Interviews</p>
+        <h2 id="int-h">Five questions you will probably get</h2>
+        <p>Practise your answers out loud, twice each. It feels odd and it works.</p>
+      </div>
+      <div class="qs">
+        <details>
+          <summary>"Tell me about yourself."</summary>
+          <div class="ans"><b>Keep it to 30 seconds.</b> Say what you do now or did last, one thing you are good at, and why you want this job. Do not start at primary school.</div>
+        </details>
+        <details>
+          <summary>"Why do you want this job?"</summary>
+          <div class="ans"><b>Be specific.</b> Mention something real about the employer, such as the hours, the team, the training or what they do. Read their website the night before.</div>
+        </details>
+        <details>
+          <summary>"Tell me about a time you dealt with a difficult situation."</summary>
+          <div class="ans"><b>Use STAR.</b> Situation: what was happening. Task: what you had to do. Action: what you did, using "I". Result: what changed. Have two of these stories ready.</div>
+        </details>
+        <details>
+          <summary>"What are your strengths?"</summary>
+          <div class="ans"><b>Pick two and prove them.</b> "I am reliable" means little. "I have had no unplanned absences in two years" means a lot.</div>
+        </details>
+        <details>
+          <summary>"Do you have any questions for us?"</summary>
+          <div class="ans"><b>Always say yes.</b> Ask what a good first month looks like, what training you would get, or when they will decide. Save pay and holiday questions for the offer stage unless they raise them.</div>
+        </details>
+      </div>
+    </section>
+
+    <section class="block" id="support" aria-labelledby="sup-h">
+      <div class="block-head">
+        <p class="eyebrow">Support</p>
+        <h2 id="sup-h">Free help beyond this page</h2>
+        <p>These are official or charity services. None of them should ever ask you to pay to get a job.</p>
+      </div>
+      <ul class="help">
+        <li data-slot="careers"><a href="https://nationalcareers.service.gov.uk" target="_blank" rel="noopener">National Careers Service</a><span>Free advice from a careers adviser, CV help and a skills assessment.</span></li>
+        <li data-slot="jobcentre"><a href="https://www.gov.uk/contact-jobcentre-plus" target="_blank" rel="noopener">Jobcentre Plus</a><span>Work coaches, benefits support and local job help. Find your nearest office.</span></li>
+        <li><a href="https://www.kingstrust.org.uk" target="_blank" rel="noopener">The King's Trust</a><span>Training, mentoring and support into work for people aged 11 to 30.</span></li>
+        <li data-slot="advice"><a href="https://www.citizensadvice.org.uk" target="_blank" rel="noopener">Citizens Advice</a><span>Help with money, work rights and anything standing in the way of a job.</span></li>
+        <li data-slot="rights"><a href="https://www.acas.org.uk" target="_blank" rel="noopener">Acas</a><span>Free guidance on your rights at work, contracts and pay.</span></li>
+        <li><a href="https://www.turn2us.org.uk" target="_blank" rel="noopener">Turn2us</a><span>Check which benefits and grants you may be able to claim while you search.</span></li>
+      </ul>
+      <div class="scam" role="note">
+        <h3>Spot a job scam</h3>
+        <ul>
+          <li>A real employer never asks you to pay for a job, a uniform, a check or training up front.</li>
+          <li>Be wary of offers with no interview, or messages that arrive out of nowhere on WhatsApp or text.</li>
+          <li>Never share your bank details or ID before you have a signed contract.</li>
+          <li>Unsure? Search the company name with the word "scam", and contact them using details from their own website.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="block" id="towns" aria-labelledby="towns-h">
+      <div class="block-head">
+        <p class="eyebrow">Jobs by town</p>
+        <h2 id="towns-h">Search where you live</h2>
+        <p>Every UK city, plus a few Norfolk towns. Pick yours to start with it already filled in.</p>
+      </div>
+      <!-- towns:start -->
+      <h3 class="towns-nation">England</h3>
+      <ul class="towns">
+        <li><a href="/bath/">Jobs in Bath</a></li>
+        <li><a href="/birmingham/">Jobs in Birmingham</a></li>
+        <li><a href="/bradford/">Jobs in Bradford</a></li>
+        <li><a href="/brighton/">Jobs in Brighton</a></li>
+        <li><a href="/bristol/">Jobs in Bristol</a></li>
+        <li><a href="/cambridge/">Jobs in Cambridge</a></li>
+        <li><a href="/canterbury/">Jobs in Canterbury</a></li>
+        <li><a href="/carlisle/">Jobs in Carlisle</a></li>
+        <li><a href="/chelmsford/">Jobs in Chelmsford</a></li>
+        <li><a href="/chester/">Jobs in Chester</a></li>
+        <li><a href="/chichester/">Jobs in Chichester</a></li>
+        <li><a href="/colchester/">Jobs in Colchester</a></li>
+        <li><a href="/coventry/">Jobs in Coventry</a></li>
+        <li><a href="/derby/">Jobs in Derby</a></li>
+        <li><a href="/doncaster/">Jobs in Doncaster</a></li>
+        <li><a href="/durham/">Jobs in Durham</a></li>
+        <li><a href="/ely/">Jobs in Ely</a></li>
+        <li><a href="/exeter/">Jobs in Exeter</a></li>
+        <li><a href="/gloucester/">Jobs in Gloucester</a></li>
+        <li><a href="/great-yarmouth/">Jobs in Great Yarmouth</a></li>
+        <li><a href="/hereford/">Jobs in Hereford</a></li>
+        <li><a href="/hull/">Jobs in Hull</a></li>
+        <li><a href="/ipswich/">Jobs in Ipswich</a></li>
+        <li><a href="/kings-lynn/">Jobs in King's Lynn</a></li>
+        <li><a href="/lancaster/">Jobs in Lancaster</a></li>
+        <li><a href="/leeds/">Jobs in Leeds</a></li>
+        <li><a href="/leicester/">Jobs in Leicester</a></li>
+        <li><a href="/lichfield/">Jobs in Lichfield</a></li>
+        <li><a href="/lincoln/">Jobs in Lincoln</a></li>
+        <li><a href="/liverpool/">Jobs in Liverpool</a></li>
+        <li><a href="/london/">Jobs in London</a></li>
+        <li><a href="/lowestoft/">Jobs in Lowestoft</a></li>
+        <li><a href="/manchester/">Jobs in Manchester</a></li>
+        <li><a href="/milton-keynes/">Jobs in Milton Keynes</a></li>
+        <li><a href="/newcastle/">Jobs in Newcastle</a></li>
+        <li><a href="/norwich/">Jobs in Norwich</a></li>
+        <li><a href="/nottingham/">Jobs in Nottingham</a></li>
+        <li><a href="/oxford/">Jobs in Oxford</a></li>
+        <li><a href="/peterborough/">Jobs in Peterborough</a></li>
+        <li><a href="/plymouth/">Jobs in Plymouth</a></li>
+        <li><a href="/portsmouth/">Jobs in Portsmouth</a></li>
+        <li><a href="/preston/">Jobs in Preston</a></li>
+        <li><a href="/ripon/">Jobs in Ripon</a></li>
+        <li><a href="/salford/">Jobs in Salford</a></li>
+        <li><a href="/salisbury/">Jobs in Salisbury</a></li>
+        <li><a href="/sheffield/">Jobs in Sheffield</a></li>
+        <li><a href="/southampton/">Jobs in Southampton</a></li>
+        <li><a href="/southend-on-sea/">Jobs in Southend-on-Sea</a></li>
+        <li><a href="/st-albans/">Jobs in St Albans</a></li>
+        <li><a href="/stoke-on-trent/">Jobs in Stoke-on-Trent</a></li>
+        <li><a href="/sunderland/">Jobs in Sunderland</a></li>
+        <li><a href="/telford/">Jobs in Telford</a></li>
+        <li><a href="/truro/">Jobs in Truro</a></li>
+        <li><a href="/wakefield/">Jobs in Wakefield</a></li>
+        <li><a href="/wells/">Jobs in Wells</a></li>
+        <li><a href="/westminster/">Jobs in Westminster</a></li>
+        <li><a href="/winchester/">Jobs in Winchester</a></li>
+        <li><a href="/wolverhampton/">Jobs in Wolverhampton</a></li>
+        <li><a href="/worcester/">Jobs in Worcester</a></li>
+        <li><a href="/york/">Jobs in York</a></li>
+      </ul>
+      <h3 class="towns-nation">Scotland</h3>
+      <ul class="towns">
+        <li><a href="/aberdeen/">Jobs in Aberdeen</a></li>
+        <li><a href="/dundee/">Jobs in Dundee</a></li>
+        <li><a href="/dunfermline/">Jobs in Dunfermline</a></li>
+        <li><a href="/edinburgh/">Jobs in Edinburgh</a></li>
+        <li><a href="/glasgow/">Jobs in Glasgow</a></li>
+        <li><a href="/inverness/">Jobs in Inverness</a></li>
+        <li><a href="/perth/">Jobs in Perth</a></li>
+        <li><a href="/stirling/">Jobs in Stirling</a></li>
+      </ul>
+      <h3 class="towns-nation">Wales</h3>
+      <ul class="towns">
+        <li><a href="/bangor-gwynedd/">Jobs in Bangor, Gwynedd</a></li>
+        <li><a href="/cardiff/">Jobs in Cardiff</a></li>
+        <li><a href="/newport/">Jobs in Newport</a></li>
+        <li><a href="/st-asaph/">Jobs in St Asaph</a></li>
+        <li><a href="/st-davids/">Jobs in St Davids</a></li>
+        <li><a href="/swansea/">Jobs in Swansea</a></li>
+        <li><a href="/wrexham/">Jobs in Wrexham</a></li>
+      </ul>
+      <h3 class="towns-nation">Northern Ireland</h3>
+      <ul class="towns">
+        <li><a href="/armagh/">Jobs in Armagh</a></li>
+        <li><a href="/bangor-county-down/">Jobs in Bangor, County Down</a></li>
+        <li><a href="/belfast/">Jobs in Belfast</a></li>
+        <li><a href="/derry/">Jobs in Derry</a></li>
+        <li><a href="/lisburn/">Jobs in Lisburn</a></li>
+        <li><a href="/newry/">Jobs in Newry</a></li>
+      </ul>
+      <!-- towns:end -->
+    </section>
+  </main>
+
+  <footer id="about">
+    <p><strong>About TobeHired.</strong> Run by Tobe Martins, a freelance graphic and motion designer in Norwich, to make job hunting a little easier. It is free and independent.</p>
+    <p><strong>TobeHired</strong> is an independent guide. It does not list vacancies itself and links out to the sites above.</p>
+    <p>Check each site's own terms. Information here is general guidance, not legal or benefits advice. <a href="/privacy/">Privacy</a></p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var GOV = { name: "Find a job", tag: "GOV.UK", best: "The government's free service for England, Scotland and Wales. Good for local roles and employers who also advertise through Jobcentre Plus.",
+      url: function (k, l) { return "https://findajob.dwp.gov.uk/search?q=" + enc(k) + "&w=" + enc(l); }, home: "https://findajob.dwp.gov.uk/" };
+  var INDEED = { name: "Indeed", tag: "Largest", best: "The biggest mix of employers and agencies. Easy to set up email alerts and apply quickly.",
+      url: function (k, l) { return "https://uk.indeed.com/jobs?q=" + enc(k) + "&l=" + enc(l); }, home: "https://uk.indeed.com/" };
+  var REED = { name: "Reed", tag: "Wide range", best: "Strong for office, retail, logistics and agency work, with salary shown on many listings.",
+      url: function (k, l) { var s = slug(k), p = slug(l); return "https://www.reed.co.uk/jobs/" + (s ? s + "-" : "") + "jobs" + (p ? "-in-" + p : ""); }, home: "https://www.reed.co.uk/jobs" };
+  // The NHS and government job sites differ by nation. Sites without a search link open their home page.
+  var NHS = {
+    England: { name: "NHS Jobs", tag: "NHS England", best: "The official site for NHS vacancies in England, from healthcare support and admin to catering and porters.",
+      url: function (k, l) { return "https://www.jobs.nhs.uk/candidate/search/results?keyword=" + enc(k) + "&location=" + enc(l); }, home: "https://www.jobs.nhs.uk/" },
+    Scotland: { name: "NHS Scotland Jobs", tag: "NHS Scotland", best: "The official site for NHS vacancies in Scotland. Search for your job on the site.", home: "https://jobs.scot.nhs.uk/" },
+    Wales: { name: "NHS Wales Jobs", tag: "NHS Wales", best: "The official guide to NHS jobs in Wales, with links to where each health board advertises.", home: "https://www.nhs.wales/nhs-jobs-in-wales/" },
+    "Northern Ireland": { name: "HSC Jobs", tag: "Health and Social Care", best: "The official site for health and social care vacancies in Northern Ireland. Search for your job on the site.", home: "https://jobs.hscni.net/" }
+  };
+  var NI_GOV = { name: "JobApplyNI", tag: "Northern Ireland", best: "The service GOV.UK points to for finding jobs in Northern Ireland. Search for your job on the site.", home: "https://www.jobapplyni.com/" };
+  var nation = document.body.getAttribute("data-nation") || "England";
+  // Support links differ by nation. The page itself shows the England versions, so it still reads correctly without JavaScript.
+  var SUPPORT = {
+    Scotland: {
+      careers: ["My World of Work", "https://www.myworldofwork.co.uk", "Free careers help in Scotland: explore jobs, build a CV and find training."],
+      advice: ["Citizens Advice Scotland", "https://www.citizensadvice.org.uk/scotland/", "Help with money, work rights and anything standing in the way of a job."]
+    },
+    Wales: {
+      careers: ["Working Wales", "https://workingwales.gov.wales", "Free, impartial careers advice and guidance in Wales for ages 16 and over."],
+      advice: ["Citizens Advice Cymru", "https://www.citizensadvice.org.uk/wales/", "Help with money, work rights and anything standing in the way of a job."]
+    },
+    "Northern Ireland": {
+      careers: ["Careers Service (nidirect)", "https://www.nidirect.gov.uk/contacts/find-your-local-careers-office", "Free careers advice in Northern Ireland. Find your local careers office."],
+      jobcentre: ["Jobs and Benefits offices", "https://www.nidirect.gov.uk/contacts/jobs-benefits-offices", "Help finding work and claiming benefits in Northern Ireland. Find your nearest office."],
+      advice: ["Advice NI", "https://www.adviceni.net", "Free advice on money, benefits and work rights in Northern Ireland."],
+      rights: ["Labour Relations Agency", "https://www.lra.org.uk", "Free guidance on your rights at work, contracts and pay in Northern Ireland."]
+    }
+  };
+  var mine = SUPPORT[nation] || {};
+  Object.keys(mine).forEach(function (slot) {
+    var li = document.querySelector('#support li[data-slot="' + slot + '"]');
+    if (!li) return;
+    var a = li.querySelector("a"), span = li.querySelector("span");
+    a.textContent = mine[slot][0]; a.href = mine[slot][1]; span.textContent = mine[slot][2];
+  });
+  var boards = [nation === "Northern Ireland" ? NI_GOV : GOV, INDEED, REED, NHS[nation] || NHS.England];
+
+  function enc(s) { return encodeURIComponent((s || "").trim()); }
+  function slug(s) { return (s || "").toLowerCase().replace(/['’]/g, "").trim().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, ""); }
+
+  var slips = document.getElementById("slips");
+  var lead = document.getElementById("boardsLead");
+  var kw = document.getElementById("kw");
+  var loc = document.getElementById("loc");
+
+  function renderBoards() {
+    var k = kw.value.trim(), l = loc.value.trim();
+    var hasQuery = k || l;
+    slips.innerHTML = "";
+    boards.forEach(function (b) {
+      var li = document.createElement("li");
+      li.className = "slip";
+      var searchable = hasQuery && b.url;
+      var href = searchable ? b.url(k, l) : b.home;
+      var label = searchable ? "Open search" : "Open site";
+      li.innerHTML =
+        '<div class="stub"><small></small><b></b></div>' +
+        '<div class="body"><p></p><p class="query"></p></div>' +
+        '<div class="go"><a target="_blank" rel="noopener"></a></div>';
+      li.querySelector("small").textContent = b.tag;
+      li.querySelector("b").textContent = b.name;
+      li.querySelector(".body p").textContent = b.best;
+      li.querySelector(".query").textContent = searchable
+        ? "Searching for " + (k ? "“" + k + "”" : "all jobs") + (l ? " near " + l : "")
+        : "";
+      var a = li.querySelector(".go a");
+      a.href = href;
+      a.textContent = label;
+      a.setAttribute("aria-label", label + " on " + b.name);
+      slips.appendChild(li);
+    });
+    lead.textContent = hasQuery
+      ? "Your searches are ready. \"Open search\" shows your results. \"Open site\" opens that site's home page, so type your job and town there. Everything opens in a new tab."
+      : "Enter a job and a place above. Each button below then opens that search on the site, in a new tab.";
+  }
+
+  document.getElementById("searchForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    renderBoards();
+    document.getElementById("boards-h").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  kw.addEventListener("input", renderBoards);
+  loc.addEventListener("input", renderBoards);
+  document.getElementById("chips").addEventListener("click", function (e) {
+    var t = e.target.closest(".chip");
+    if (!t) return;
+    kw.value = t.textContent;
+    renderBoards();
+    (loc.value ? kw : loc).focus();
+  });
+
+  /* weekly plan */
+  var steps = [
+    { d: "Day 1", t: "Write down the three job titles you would take tomorrow." },
+    { d: "Day 1", t: "Save a one-page CV with your jobs, skills and contact details." },
+    { d: "Day 2", t: "Use a sensible email address and record a clear voicemail greeting." },
+    { d: "Day 2", t: "Register with Find a job and one other site, and turn on job alerts." },
+    { d: "Day 3", t: "Ask two people if they will act as your referees." },
+    { d: "Day 4", t: "Apply for three jobs. Change the top third of your CV to match each advert." },
+    { d: "Day 5", t: "Tell friends, family and past colleagues what you are looking for." },
+    { d: "Day 6", t: "Practise three interview answers out loud." },
+    { d: "Day 7", t: "Check which applications got replies and adjust your search." }
+  ];
+  var KEY = "tobehired-week-v1";
+  var state = [];
+  try { state = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (err) { state = []; }
+  if (!Array.isArray(state)) state = [];
+
+  var list = document.getElementById("tasks");
+  steps.forEach(function (s, i) {
+    var li = document.createElement("li");
+    li.className = "task";
+    li.innerHTML = '<label><span class="day"></span><span class="what"><input type="checkbox" id="step' + i + '"><span></span></span></label>';
+    var prev = steps[i - 1];
+    if (prev && prev.d === s.d) li.classList.add("cont");
+    li.querySelector(".day").textContent = s.d;
+    li.querySelector(".what > span").textContent = s.t;
+    var cb = li.querySelector("input");
+    cb.setAttribute("aria-label", s.d + ": " + s.t);
+    cb.checked = state.indexOf(i) !== -1;
+    cb.addEventListener("change", function () { save(); update(); });
+    list.appendChild(li);
+  });
+
+  function checks() { return Array.prototype.slice.call(list.querySelectorAll("input")); }
+  function save() {
+    var done = [];
+    checks().forEach(function (c, i) { if (c.checked) done.push(i); });
+    try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (err) {}
+  }
+  function update() {
+    var all = checks(), n = all.filter(function (c) { return c.checked; }).length, tot = all.length;
+    var pct = Math.round(n / tot * 100);
+    document.getElementById("doneCount").textContent = n;
+    document.getElementById("totalCount").textContent = tot;
+    document.getElementById("barFill").style.width = pct + "%";
+    document.querySelector(".bar").setAttribute("aria-valuenow", pct);
+    var msg = "Start with Day 1. It takes about 20 minutes.";
+    if (n > 0 && n < 4) msg = "Good start. Your CV and alerts are the foundation.";
+    else if (n >= 4 && n < tot) msg = "Over halfway. Applications are where replies come from.";
+    else if (n === tot) msg = "All done. Repeat Day 4 and Day 7 each week until you land something.";
+    document.getElementById("progressMsg").textContent = msg;
+  }
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    checks().forEach(function (c) { c.checked = false; });
+    save(); update();
+  });
+
+  renderBoards();
+  update();
+})();
+</script>
+
+<button class="chat-fab" id="chatFab" type="button" aria-controls="chatPanel" aria-expanded="false">Ask TobeHired</button>
+<section class="chat-panel" id="chatPanel" aria-label="TobeHired assistant" hidden>
+  <div class="chat-head"><b>TobeHired assistant</b><span class="chat-actions"><button type="button" id="chatNew" class="chat-text-btn">New chat</button><button type="button" id="chatClose" aria-label="Close assistant">&times;</button></span></div>
+  <div class="chat-log" id="chatLog" aria-live="polite"></div>
+  <div class="starters" id="starters"></div>
+  <form class="chat-form" id="chatForm">
+    <textarea id="chatInput" rows="2" maxlength="3500" placeholder="Ask about jobs, CVs or interviews. You can paste your CV." autocomplete="off" aria-label="Your message"></textarea>
+    <button id="chatSend" type="submit">Send</button>
+  </form>
+  <p class="chat-note">This is an AI assistant and can make mistakes. It cannot see live vacancies. Your messages are sent to Anthropic's Claude to write replies, and TobeHired does not save them. If you paste a CV, leave out your date of birth and full address. Never share passwords, bank or ID details.</p>
+</section>
+
+<script>
+(function () {
+  var fab = document.getElementById("chatFab"), panel = document.getElementById("chatPanel");
+  var log = document.getElementById("chatLog"), form = document.getElementById("chatForm");
+  var input = document.getElementById("chatInput"), send = document.getElementById("chatSend");
+  var starters = document.getElementById("starters");
+  var history = [], busy = false, gen = 0;
+  var prompts = ["What jobs could I do with no experience?", "Help me write my CV profile", "Practise an interview with me"];
+
+  function add(text, cls) { var d = document.createElement("div"); d.className = "msg " + cls; d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; }
+  function open(on) {
+    panel.hidden = !on; fab.hidden = on; fab.setAttribute("aria-expanded", on);
+    if (on) { if (!log.children.length) { add("Hi, I'm the TobeHired assistant, an AI here to help with your job search. Looking for work can feel like a lot, so we can take it one step at a time. What kind of work are you looking for?", "bot"); } input.focus(); }
+    else fab.focus();
+  }
+  function addStarter(p) {
+    var b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = p;
+    b.addEventListener("click", function () { ask(p); }); starters.appendChild(b);
+  }
+  prompts.forEach(addStarter);
+  function ask(text) {
+    text = (text || "").trim(); if (!text || busy) return;
+    busy = true; send.disabled = true; starters.innerHTML = "";
+    add(text, "me"); history.push({ role: "user", content: text }); input.value = "";
+    var wait = add("Thinking…", "bot"), g = gen, got = "";
+    function fail(msg) { wait.className = "msg err"; wait.textContent = msg; history.pop(); }
+    function finish() { if (g !== gen) return; log.removeAttribute("aria-busy"); busy = false; send.disabled = false; log.scrollTop = log.scrollHeight; input.focus(); }
+    log.setAttribute("aria-busy", "true");
+    fetch("/api/chat", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ stream: true, messages: history, context: { nation: document.body.getAttribute("data-nation") || "", place: (document.getElementById("loc") || {}).value || "", keyword: (document.getElementById("kw") || {}).value || "" } }) })
+      .then(function (r) {
+        var type = r.headers.get("content-type") || "";
+        if (!r.ok || type.indexOf("text/event-stream") === -1 || !r.body || !r.body.getReader) {
+          return r.json().then(function (j) {
+            if (g !== gen) return;
+            if (r.ok && j.reply) { wait.textContent = j.reply; history.push({ role: "assistant", content: j.reply }); }
+            else fail(j.error || "Something went wrong. Please try again.");
+          });
+        }
+        var reader = r.body.getReader(), dec = new TextDecoder(), buf = "", failed = "";
+        function pump() {
+          return reader.read().then(function (x) {
+            if (g !== gen) { try { reader.cancel(); } catch (e) {} return; }
+            if (x.done) {
+              if (failed && !got) return fail(failed);
+              if (!got) return fail("Something went wrong. Please try again.");
+              history.push({ role: "assistant", content: got });
+              return;
+            }
+            buf += dec.decode(x.value, { stream: true });
+            var i;
+            while ((i = buf.indexOf("\n\n")) !== -1) {
+              var line = buf.slice(0, i); buf = buf.slice(i + 2);
+              if (line.indexOf("data:") !== 0) continue;
+              var j; try { j = JSON.parse(line.slice(5)); } catch (e) { continue; }
+              if (j.t) { got += j.t; wait.textContent = got; log.scrollTop = log.scrollHeight; }
+              else if (j.error) failed = j.error;
+            }
+            return pump();
+          });
+        }
+        return pump();
+      })
+      .catch(function () { if (g !== gen) return; if (got) { history.push({ role: "assistant", content: got }); } else fail("Could not reach the assistant. Check your connection and try again."); })
+      .then(finish);
+  }
+  function reset() { gen++; history = []; log.innerHTML = ""; busy = false; send.disabled = false; add("Hi, I'm the TobeHired assistant, an AI here to help with your job search. What kind of work are you looking for?", "bot"); starters.innerHTML = ""; prompts.forEach(addStarter); input.value = ""; input.focus(); }
+  input.addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); form.requestSubmit(); } });
+  document.getElementById("chatNew").addEventListener("click", reset);
+  fab.addEventListener("click", function () { open(true); });
+  document.getElementById("chatClose").addEventListener("click", function () { open(false); });
+  panel.addEventListener("keydown", function (e) { if (e.key === "Escape") open(false); });
+  form.addEventListener("submit", function (e) { e.preventDefault(); ask(input.value); });
+})();
+</script>
+</body>
+</html>
